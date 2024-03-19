@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background-color: #331D2C;
+}
+#thin-header{
+    background-color: #3F2E3E;
+    margin: 0px;
+    padding: auto;
+    font-family: Popping,sans-serif;
+    font-weight: lighter;
+    color: bisque;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+}
+#main-head{
+    color: #fff;
+    font-family: Poppins, sans-serif;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: .8%;
+    padding-top: 2%;
+    font-size: 35px;
+    animation: glow 1s ease-in-out infinite alternate
+}
+@keyframes glow{
+    0%{
+        text-shadow: 0 0 10px  #fff, 0 0 20px #e60099, 0 0 30px #e60099,
+        0 0 40px #e60099, 0 0 50px #e60099, 0 0 60px #e60099, 0 0 60px #e60099,
+        0 0 70px #e60099, 0 0 80px #e60099;
+    }
+    100%
+    {
+        text-shadow: 0 0 20 #fff, 0 0 30px #fff,
+        0 0 40px #ff66cc, 0 0 50px #ff66cc, 0 0 60px #ff66cc,
+        0 0 70px #ff66cc, 0 0 80px #ff66cc;
+    }
+}
+#botam{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 17vh;
+    gap: 50px;
+}
+#switch{
+        position: relative;
+        background-color: #fff;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.5em;
+        letter-spacing: 0.1em;
+        font-weight: 400;
+        padding: 10px 30px;
+        transition: 0.5s;
+}
+#switch:hover
+{
+    background: var(--clr);
+    color: var(--clr);
+    letter-spacing: 0.25em;
+    box-shadow: 0 0 35px var(--clr);
+}
+#switch:before{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #331D2C;
+}
+#switch span{
+    position: relative;
+    z-index: 1;
+}
+#switch i{
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+#switch i::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 20px;
+    height: 4px;    
+    background: #331D2C;
+    transform: translateX(-50%) skew(325deg);
+    transition: 0.5s;
+}
+#switch:hover i::before{
+    width: 20px;
+    left: 20%;
+}
+#switch i::after
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 20px;
+    height: 4px;    
+    background: #331D2C;
+    transform: translateX(-50%) skew(325deg);
+    transition: 0.5s;
+}
+#switch:hover i::after{
+    width: 20px;
+    left: 80%;
+}
